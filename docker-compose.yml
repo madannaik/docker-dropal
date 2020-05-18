@@ -1,3 +1,9 @@
+# During initial setup of drupal,
+# Database type: mysql
+# Database name: madan
+# Database username: drupal
+# Database password: drupal
+# ADVANCED OPTIONS; Database host: database
 version: '3.7'
 services:
   database:
