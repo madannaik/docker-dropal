@@ -1,0 +1,29 @@
+version: '3.7'
+services:
+  database:
+    image: mysql:5.7
+    restart: always
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=drupalimg
+      - MYSQL_DATABASE=drupal
+      - MYSQL_USER=madan
+      - MYSQL_PASSWORD=drupal
+  drupal:
+    image: drupal:8-apache
+    ports:
+      - 8081:80
+    restart: always
+    depends_on:
+      - database
+    volumes:
+      #this gives a anonymous volume for drupal
+      - /var/www/html/modules
+      - /var/www/html/profiles
+      - /var/www/html/themes
+      - /var/www/html/sites
+
+volumes:
+  db_data:
