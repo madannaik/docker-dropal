@@ -19,6 +19,7 @@ Drupal is a free and open-source content-management framework written in PHP and
 5)give your site name,login id and password for further excess!!then click next
 
 7)in database configuration option:select mysql
+    
     - Database name/username/password: <details for accessing your MySQL instance> (MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE; see          environment variables in the description in docker-compose file for mysql)
     - ADVANCED OPTIONS - Database host: database (Containers on the same docker-network are routable by their container-name)
     
